@@ -34,7 +34,7 @@
 		                    <h3>Your Info</h3>
 		                    <input type="text" class="form-control mt-3" placeholder="Name">
 		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
-		                    <input type="email" class="form-control mt-3" placeholder="Email">
+		                    <input type="num" class="form-control mt-3" placeholder="Email">
 		                    <input type="text" class="form-control mt-3" placeholder="Relationship to missing person">
 		                </fieldset>
 
@@ -46,12 +46,12 @@
 		        </div>
 
 		        <div class="col-md-4">
-		            <form id="contact" action="" method="post">
+		            <form id="contact" action="api/person/" method="post">
 				    <fieldset class="form-group pt-3">
 		                    <h3>Shelter Check-In</h3>
-		                    <input type="text" class="form-control mt-3" placeholder="Name">
-		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
-		                    <input type="email" class="form-control mt-3" placeholder="Date of birth">
+		                    <input type="text" id="name" class="form-control mt-3" placeholder="Name">
+		                    <input type="number" id="phone" class="form-control mt-3" placeholder="Phone number">
+		                    <input type="Date" id="dob" class="form-control mt-3" placeholder="Date of birth">
 		                </fieldset>
 		                <button type="submit" class="btn btn-primary">Register me</button>
 				   

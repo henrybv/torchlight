@@ -15,12 +15,12 @@ class Shelter(models.Model):
 
     id = models.AutoField(primary_key=True)
     disaster = models.ForeignKey(Disaster, null=True, blank=True)
-    name = models.CharField(max_length=32)
-    city = models.CharField(max_length=32)
-    state = models.CharField(max_length=32)
-    country = models.CharField(max_length=32)
-    status = models.CharField(max_length=32)
-    location = models.CharField(max_length=32)
+    name = models.CharField(max_length=32, null=True, blank=True)
+    city = models.CharField(max_length=32, null=True, blank=True)
+    state = models.CharField(max_length=32, null=True, blank=True)
+    country = models.CharField(max_length=32, null=True, blank=True)
+    status = models.CharField(max_length=32, null=True, blank=True)
+    location = models.CharField(max_length=32, null=True, blank=True)
     capacity = models.IntegerField(null=True, blank=True)
 
 
@@ -35,6 +35,7 @@ class Person(models.Model):
     emergencyName = models.CharField(max_length=32)
     emergencyPhone = models.CharField(max_length=32)
     emergencyEmail = models.CharField(max_length=32)
+
 
 
 # class Inventory(models.Model):
