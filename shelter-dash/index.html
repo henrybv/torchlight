@@ -12,12 +12,16 @@
     <script src="lib/vizuly_core.min.js"></script>
     <script src="lib/vizuly_radialprogress.min.js"></script>
 
+    <script src="lib/agora/vendor-bundle.js"></script>
+    <script src="lib/agora/AgoraRTCSDK-1.12.0.js"></script>
+    <script src="lib/agora/meeting.js"></script>
+
     <script type="text/javascript">
-var shelters = [
+var sheltersX = [
     {
         "location": "Tampa, FL",
         "population": [50, 80, "green"],
-        "water": [25, 100, "blue"]
+        "water": [75, 100, "blue"]
     },
     {
         "location": "Miami, FL",
@@ -31,10 +35,46 @@ var shelters = [
     },
 ];
 
+var shelters = [
+    {
+        "name": "Copperfield Baptist Church",
+        "street": "8350 Hwy 6N",
+        "city": "Houston"
+    }, {
+        "name": "Golden Acres Baptist Church",
+        "street": "2813 Pansy Street",
+        "city": "Pasadena"
+    }, {
+        "name": "Memorial Drive Presbyterian Church",
+        "street": "11612 Memorial Dr",
+        "city": "Houston"
+    }, {
+        "name": "St. Thomas Moore Catholic Church",
+        "street": "10330 Hillcroft St",
+        "city": "Houston"
+    }, {
+        "name": "Cypress Ridge High School",
+        "street": "7900 N. Eldridge",
+        "city": "Houston"
+    }, {
+        "name": "Metropolitan Baptist Church",
+        "street": "13000 Jones Rd",
+        "city": "Houston"
+    }, {
+        "name": "Memorial Baptist Church",
+        "street": "6900 Fairmont",
+        "city": "Pasadena"
+    }, {
+        "name": "First Baptist Church - Lauder",
+        "street": "4422 Lauder Rd",
+        "city": "Houston"
+    }
+]
+
 window.onload = function() {
     L.mapquest.key = 'tzjnBtklfROgvtSziM4XfidcYdriKBId';
 
-    var locs = shelters.map(function(x) { return x.location; });
+    var locs = shelters.map(function(x) { return x.street + " " + x.city + " TX"; });
     var markerWidth = 64;
 
     L.mapquest.geocoding().geocode(locs, createMap);
@@ -53,7 +93,7 @@ window.onload = function() {
         map.fitBounds(featureGroup.getBounds());
       
         window.vizMarkers = [];
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < shelters.length; i++) {
             var markerNode = document.getElementById("marker" + i);
             var vizMarker = vizuly.viz.radial_progress(markerNode);
             vizMarker.data(0)
@@ -75,13 +115,23 @@ window.onload = function() {
 
     function generateMarkersFeatureGroup(response) {
         var group = [];
+
+        var videoElem = document.getElementById("agora-wrapper");
+        videoElem.parentNode.removeChild(videoElem);
       
         for (var i = 0; i < response.results.length; i++) {
           var location = response.results[i].locations[0];
           var locationLatLng = location.latLng;
+          let name = shelters[i].name;
+
+          var pop = function(layer) {
+              videoElem.childNodes[0].innerHTML = pop;
+              window.initAgoraRTC();
+              return videoElem;
+          };
       
           var marker = L.marker(locationLatLng, {icon: L.divIcon({html: '<div id="marker' + i + '"></div>', iconSize: [markerWidth, markerWidth]})})
-            .bindPopup(location.adminArea5 + ', ' + location.adminArea3);
+            .bindPopup(pop);
       
           group.push(marker);
         }
@@ -90,7 +140,7 @@ window.onload = function() {
 };
 
 function updateMarkers(key) {
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < shelters.length; i++) {
         var vizMarker = window.vizMarkers[i];
         var valMax = shelters[i][key];
         var val = valMax[0] / valMax[1] * 100;
@@ -119,6 +169,27 @@ function updateMarkers(key) {
     <div>
         <a href="#" onclick="updateMarkers('population')">Population</a>
         <a href="#" onclick="updateMarkers('water')">Water</a>
+    </div>
+
+
+    <div id="div_device" class="panel panel-default" style="display:none">
+        <div class="select">
+            <label for="audioSource">Audio source: </label><select id="audioSource"></select>
+        </div>
+        <div class="select">
+            <label for="videoSource">Video source: </label><select id="videoSource"></select>
+        </div>
+    </div>
+
+    <div id="agora-wrapper" style="width:300px; height: 169px">
+        <div class="room-name-title" id="room-name-meeting"></div>
+        <div class="main-container">
+            <div id="video-container-parent">
+                <div id="video-container" class="video-container">
+                    <div id="video-container-multiple"></div>
+                </div>
+            </div>
+        </div>
     </div>
   </body>
 </html>
