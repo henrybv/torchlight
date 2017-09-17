@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 {% block body %}
 
-        <h1>Test SMS!</h1>
+	<style>
+		h1 {
+			margin-top: 20px;
+		}
+		h1, h3, h4 {
+			color: black;
+			margin: 10px;
+		}
+
+	</style>
+	<div class="container">
+        <!-- <h1>Test SMS!</h1>
         {% if result.success %}
         <p><b>I sent a texty text!  Go poke {{ result.args.to }} to see if (s)he got it.</b></p>
         {% else %}
@@ -9,6 +20,16 @@
         {% endif %}
 
         <p>Here's some debug info:</p>
-        <p><pre>{{ result_pretty }}</pre></p>
+        <p><pre>{{ result_pretty }}</pre></p> -->
+
+        <h1>You've checked in!</h1>
+
+        <h3>We have sent a message to {{result.args.to}} to notify them of your arrival. Here was the message: </h3>
+
+        <h4><em>" {{result.args.text}} " </em></h4>
+
+        <h4>They will be viewing the <a href="http://bit.ly/2x5bNpv">live stream at your shelter</a>, so go ahead to let them know you're safe.</h4>
+
+     </div>
             
 {% endblock body %}

@@ -26,16 +26,16 @@
 		                </fieldset>
 		                <fieldset class="form-group">
 		                    <h3>Find Missing Person</h3>
-		                    <input type="text" class="form-control mt-3" placeholder="Name">
-		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
+		                    <input type="text" class="form-control mt-3" placeholder="Name of person">
+		                    <input type="text" class="form-control mt-3" placeholder="Phone number of person">
 		                    <!-- <input type="text" class="form-control mt-3" placeholder="Date of birth"> -->
 		                </fieldset>
 		                <fieldset class="form-group pt-3">
 		                    <h3>Your Info</h3>
-		                    <input type="text" class="form-control mt-3" placeholder="Name">
-		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
-		                    <input type="email" class="form-control mt-3" placeholder="Email">
-		                    <input type="text" class="form-control mt-3" placeholder="Relationship to missing person">
+		                    <input type="text" class="form-control mt-3" placeholder="Your name">
+		                    <input type="text" class="form-control mt-3" placeholder="Your phone number">
+		                    <input type="email" class="form-control mt-3" placeholder="Your email">
+		                    <input type="text" class="form-control mt-3" placeholder="Your relationship to missing person">
 		                </fieldset>
 
 		                <button type="submit" class="btn btn-primary">Search and Notify Me</button>
@@ -46,16 +46,21 @@
 		        </div>
 
 		        <div class="col-md-4">
-		            <form id="contact" action="" method="post">
+		            <!-- <form id="contact" action="" method="post"> -->
+		            <h3>Shelter Check In</h3>
 				    <fieldset class="form-group pt-3">
-		                    <h3>Shelter Check-In</h3>
+				    		<select name="cars">
+							  <option value="volvo" default>Mercy Church Shelter</option>
+							  <option value="saab">Houston Community Center</option>
+							  <option value="fiat">Houston Public School</option>
+							</select>
 		                    <input type="text" class="form-control mt-3" placeholder="Name">
 		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
-		                    <input type="email" class="form-control mt-3" placeholder="Date of birth">
+		                    <input type="email" class="form-control mt-3" placeholder="Email">
 		                </fieldset>
-		                <button type="submit" class="btn btn-primary">Register me</button>
+		                <a href="http://127.0.0.1:8000/test_sms/?to=16282252366&text=Hi%20Jonothan.%20Jade%20checked%20into%20Mercy%20Church%20Shelter%20on%20September%2017%20at%2012:30PM.%20They%20can%20be%20found%20at%201259%20Mercy%20Street,%20Houston.%20See%20a%20live%20stream%20of%20their%20status%20at%20their%20shelter:%20http://bit.ly/2x5bNpv,%20with%20room%20name%20%22shelter%22."><button type="submit_" class="btn btn-primary">Register me</button></a>
 				   
-				  </form>
+				  <!-- </form> -->
 		        </div>
 
 		    </div>
