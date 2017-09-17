@@ -25,4 +25,4 @@ class TestSmsView(TemplateView):
 
 class ShelterPageView(TemplateView):
     def get(self, request, **kwargs):
-        return render(request, 'shelterUI/search.html', context=None)
+        return render(request, 'shelters.html', context=None)

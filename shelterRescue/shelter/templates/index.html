@@ -1,18 +1,68 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block head %}
 	<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.1.0/mapquest.js"></script>
     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.1.0/mapquest.css"/>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    
+
+	<!-- Vizuly specific style sheets -->
+    <link rel="stylesheet" href="{% static "lib/styles/vizuly.css" %}">
+    <link rel="stylesheet" href="{% static "lib/styles/vizuly_radial_progress.css" %}">
+
 
 {% endblock head %}
 {% block body %}
 
+		<div class="container mt-3 pt-3">
 
+		    <div class="row">
 
-        <h1>Look at me!  I'm Mr. Hello World! 22</h1>
+		        <div class="col-md-6">
+		            <form>
+		                <fieldset class="form-group">
+		                    <select class="custom-select">
+		                    <option selected>Irma 2017</option>
+		                </select>
+		                </fieldset>
+		                <fieldset class="form-group">
+		                    <h3>Find Missing Person</h3>
+		                    <input type="text" class="form-control mt-3" placeholder="Name">
+		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
+		                    <!-- <input type="text" class="form-control mt-3" placeholder="Date of birth"> -->
+		                </fieldset>
+		                <fieldset class="form-group pt-3">
+		                    <h3>Your Info</h3>
+		                    <input type="text" class="form-control mt-3" placeholder="Name">
+		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
+		                    <input type="email" class="form-control mt-3" placeholder="Email">
+		                    <input type="text" class="form-control mt-3" placeholder="Relationship to missing person">
+		                </fieldset>
+
+		                <button type="submit" class="btn btn-primary">Search and Notify Me</button>
+		            </form>
+		        </div>
+
+		        <div class="col-md-2">
+		        </div>
+
+		        <div class="col-md-4">
+		            <form id="contact" action="" method="post">
+				    <fieldset class="form-group pt-3">
+		                    <h3>Shelter Check-In</h3>
+		                    <input type="text" class="form-control mt-3" placeholder="Name">
+		                    <input type="text" class="form-control mt-3" placeholder="Phone number">
+		                    <input type="email" class="form-control mt-3" placeholder="Date of birth">
+		                </fieldset>
+		                <button type="submit" class="btn btn-primary">Register me</button>
+				   
+				  </form>
+		        </div>
+
+		    </div>
+		</div>
+
+        <!-- <h1>Look at me!  I'm Mr. Hello World! 22</h1>
         <b>Click here to send a texty text:</b>
-        <a href="{% url 'test_sms' %}">Here</a>
+        <a href="{% url 'test_sms' %}">Here</a> -->
         
 {% endblock body %}
