@@ -17,7 +17,7 @@
       window.onload = function() {
         L.mapquest.key = 'tzjnBtklfROgvtSziM4XfidcYdriKBId';
 
-		var locs = ['Portland, OR', 'Flagstaff, AZ', 'Denver, CO'];
+		var locs = ['Tampa, FL', 'Miami, FL', 'Orlando, FL'];
 		var vals = [80, 48, 90];
 		var markerWidth = 64;
 
@@ -26,7 +26,7 @@
         function createMap(error, response) {
           var map = L.mapquest.map('map', {
             center: [0, 0],
-            layers: L.mapquest.tileLayer('map'),
+            layers: L.mapquest.tileLayer('light'),
             zoom: 14
           });
 
@@ -43,11 +43,13 @@
 				  .min(0)
 				  .max(100)
 				  .capRadius(1)
-				  .startAngle(250)
-				  .endAngle(110)
-				  .arcThickness(.15);
-			  var theme = vizuly.theme.radial_progress(vizMarker).skin(vizuly.skin.RADIAL_PROGRESS_ALERT);
+				  .startAngle(240)
+				  .endAngle(120)
+				  .arcThickness(.25);
 			  vizMarker.width(markerWidth).height(markerWidth).radius(markerWidth/2.2).update();
+			  vizMarker.selection().selectAll(".vz-radial_progress-arc").style("fill","green").style("stroke","white").style("stroke-width","1px").style("stroke-opacity","1");
+			  vizMarker.selection().selectAll(".vz-radial_progress-track").style("fill","grey").style("fill-opacity",0.5);
+			  vizMarker.selection().selectAll(".vz-radial_progress-label").style("display","none");
 		  }
         }
 
@@ -75,10 +77,6 @@
 		.leaflet-div-icon {
 			border: none;
 			background: none;
-		}
-
-		.vz-radial_progress-label {
-			display: none;
 		}
 	</style>
   </head>
