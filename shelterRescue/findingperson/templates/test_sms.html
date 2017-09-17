@@ -1,0 +1,19 @@
+<!-- howdy/templates/index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test SMS!</title>
+    </head>
+    <body>
+        <h1>Test SMS!</h1>
+        {% if result.success %}
+        <p><b>I sent a texty text!  Go poke {{ result.args.to }} to see if (s)he got it.</b></p>
+        {% else %}
+        <p><b>Uh oh spaghettio's, couldn't send a text.</b></p>
+        {% endif %}
+
+        <p>Here's some debug info:</p>
+        <p><pre>{{ result_pretty }}</pre></p>
+    </body>
+</html>
