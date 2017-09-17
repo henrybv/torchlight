@@ -5,6 +5,7 @@ from django.utils.functional import SimpleLazyObject
 SENDER = "12016728857"
 HENRY = "12123350455"
 JADE = "16282208811"
+JOHN = "16502782948"
 
 _client = SimpleLazyObject(
 	lambda: nexmo.Client(
