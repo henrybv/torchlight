@@ -1,13 +1,8 @@
-<!-- howdy/templates/index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Hello!</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block body %}
+
         <h1>Look at me!  I'm Mr. Hello World! 22</h1>
         <b>Click here to send a texty text:</b>
         <a href="{% url 'test_sms' %}">Here</a>
-    </body>
-</html>
+        
+{% endblock body %}

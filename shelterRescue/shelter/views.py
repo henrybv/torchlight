@@ -22,3 +22,7 @@ class TestSmsView(TemplateView):
         	result=result,
         	result_pretty=pprint.pformat(result),
         ))
+
+class ShelterPageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'shelterUI/search.html', context=None)
