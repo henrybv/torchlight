@@ -97,7 +97,7 @@ So I can take my family to a shelter that is local and won't turn us away.
 
 * We would like to make this project open sourced 
 * Test the interface and use cases in front of shelter organizers
-* Any press inquries please contact [us here](mailto:hello@jadenator)
+* Any inquries please contact [us here](mailto:hello@jadenator)
 
 ## Team
 
@@ -105,7 +105,7 @@ So I can take my family to a shelter that is local and won't turn us away.
 * [Henry Bao-Viet Nguyen](https://github.com/henrybv)
 * [Jonathan Mah](https://github.com/jmah)
 * [Jade Feng](https://github.com/jadefeng)
-
+* [Sean Bell](https://github.com/seanbell)
 
 
 
