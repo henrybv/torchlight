@@ -1,16 +1,23 @@
 import pprint
 import nexmo
+import sys
 from django.utils.functional import SimpleLazyObject
 
-SENDER = "12016728857"
-HENRY = "12123350455"
-JADE = "16282208811"
-JOHN = "16502782948"
+# Fill in API key and secret, and then comment out these lines:
+print "WHOOPS! Please open sms.py and fill in your "
+print "API key/secret and your Nexmo-purchased number"
+print "Press Ctrl-C to quit and fill in the data."
+sys.exit(1)
 
+# ~~~ START: FILL IN BELOW ~~~
+SENDER = "< purchase a new number from Nexmo and put it here>"
+RECIPIENT = "< your cell phone number >"
 _client = SimpleLazyObject(
 	lambda: nexmo.Client(
-		key="f90c82e2",
-		secret="bf515501babcffd4"))
+		key="< FILL IN HERE >",
+		secret="< FILL IN HERE >"))
+# ~~~ END: FILL IN ABOVE ~~~
+
 
 def send_sms(text, to, sender=SENDER):
 	""" Send an SMS and return True on success """
