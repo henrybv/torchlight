@@ -31,3 +31,15 @@ class Person(models.Model):
     emergencyName = models.CharField(max_length=32)
     emergencyPhone = models.CharField(max_length=32)
     emergencyEmail = models.CharField(max_length=32)
+
+
+# class Inventory(models.Model):
+	
+#     id = models.AutoField(primary_key=True)
+#     shelter_id = models.ForeignKey(Shelter, null=True, blank=True)
+#     name = models.CharField(max_length=45)
+#     email = models.CharField(max_length=32)
+#     phone = models.CharField(max_length=32)
+#     emergencyName = models.CharField(max_length=32)
+#     emergencyPhone = models.CharField(max_length=32)
+#     emergencyEmail = models.CharField(max_length=32)
