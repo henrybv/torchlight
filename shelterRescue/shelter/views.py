@@ -23,6 +23,10 @@ class TestSmsView(TemplateView):
         	result_pretty=pprint.pformat(result),
         ))
 
+class FindPersonPageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'find_person.html', context=None)
+
 class ShelterPageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'shelters.html', context=None)
