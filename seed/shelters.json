@@ -1,0 +1,107 @@
+{ 
+	"shelters" : { 
+		"florida": [ 
+			"Alachua, FL",
+			"Baker , FL",
+			"Bay , FL",
+			"Bradford , FL",
+			"Brevard , FL",
+			"Broward",
+			"Calhoun , FL",
+			"Charlotte , FL",
+			"Citrus , FL",
+			"Clay , FL",
+			"Collier , FL",
+			"Columbia, FL",
+			"DeSoto , FL",
+			"Dixie , FL",
+			"Duval , FL",
+			"Escambia , FL",
+			"Flagler , FL",
+			"Franklin, FL",
+			"Gadsden , FL",
+			"Gilchrist , FL",
+			"Glades , FL",
+			"Gulf, FL",
+			"Hamilton , FL",
+			"Hardee , FL",
+			"Hendry , FL",
+			"Hernando , FL",
+			"Highlands , FL",
+			"Hillsborough , FL",
+			"Holmes, FL",
+			"Indian River , FL",
+			"Jackson , FL",
+			"Jefferson, FL",
+			"Lafayette , FL",
+			"Lake , FL",
+			"Lee , FL",
+			"Leon , FL",
+			"Levy , FL",
+			"Liberty, FL",
+			"Madison , FL",
+			"Manatee , FL",
+			"Marion , FL",
+			"Martin , FL",
+			"Miami-Dade , FL",
+			"Monroe, FL",
+			"Nassau , FL",
+			"Okaloosa , FL",
+			"Okeechobee , FL",
+			"Orange , FL",
+			"Osceola, FL",
+			"Palm Beach , FL",
+			"Pasco , FL",
+			"Pinellas , FL",
+			"Polk , FL",
+			"Putnam, FL",
+			"Santa Rosa , FL",
+			"Sarasota , FL",
+			"Seminole , FL",
+			"St. Johns , FL",
+			"St. Lucie , FL",
+			"Sumter , FL",
+			"Suwannee, FL",
+			"Taylor , FL",
+			"Union , FL",
+			"Volusia , FL",
+			"Wakulla , FL",
+			"Walton , FL",
+			"Washington, FL" ],
+		"texas": [
+			{
+				"name": "Copperfield Baptist Church",
+				"street": "8350 Hwy 6N",
+				"city": "Houston"
+			}, {
+				"name": "Golden Acres Baptist Church",
+				"street": "2813 Pansy Street",
+				"city": "Pasadena"
+			}, {
+				"name": "Memorial Drive Presbyterian Church",
+				"street": "11612 Memorial Dr",
+				"city": "Houston"
+			}, {
+				"name": "St. Thomas Moore Catholic Church",
+				"street": "10330 Hillcroft St",
+				"city": "Houston"
+			}, {
+				"name": "Cypress Ridge High School",
+				"street": "7900 N. Eldridge",
+				"city": "Houston"
+			}, {
+				"name": "Metropolitan Baptist Church",
+				"street": "13000 Jones Rd",
+				"city": "Houston"
+			}, {
+				"name": "Memorial Baptist Church",
+				"street": "6900 Fairmont",
+				"city": "Pasadena"
+			}, {
+				"name": "First Baptist Church - Lauder",
+				"street": "4422 Lauder Rd",
+				"city": "Houston"
+			}
+		]
+	}
+}
